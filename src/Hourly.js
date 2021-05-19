@@ -17,15 +17,14 @@ const useStyles = makeStyles({
 
 export default function Hourly ( {weather} ) {
     const styles = useStyles();
-    let i = 0;
 
     return(
         <h1>
             <div className={styles.title}>Hourly forecast:</div>
             <br/>
                 <div className={styles.grid}>
-                    {weather.map((hour) =>
-                    <Box border={1} padding={2}>Hour {i+=1}
+                    {weather.map((hour, i) =>
+                    <Box border={1} padding={2}>Hour {i+1}
                         <div>Temp.: {hour.temp} °F</div>
                         <div>Humidity: {hour.humidity} %</div>
                         <div>Pressure: {hour.pressure} hPa</div>
