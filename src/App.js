@@ -79,7 +79,7 @@ function App() {
       </h1>
     );
   }
-  else {
+
     return (
       <h1 className={styles.title}>
         Weather Forecast for {location}
@@ -121,6 +121,6 @@ function App() {
         <Daily weather={weather.daily}></Daily>
       </h1>
     )
-  }
+  
 }
 export default App;
