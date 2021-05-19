@@ -10,9 +10,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-
-const API_KEY = 'e61cdd61f9ede3a8fae35d4f5d74f41d';
 const useStyles = makeStyles({
   title: {
     color: 'black',
