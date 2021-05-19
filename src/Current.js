@@ -25,14 +25,12 @@ const useStyles = makeStyles({
 
 export default function Current ( {weather} ) {
     const styles = useStyles();
-    console.log(weather);
 
     return(
         <h1>
             <div  className={styles.title}>Current forecast:</div>
             <br/>
                 <div className={styles.grid}>
-                    {console.log(weather)}
                     <div>
                         <div>Current Temperature: {weather.temp} °F</div>
                         <div>Feels Like: <br/> {weather.feels_like} °F</div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
@@ -34,7 +34,6 @@ function App() {
       .then((obj) => {
         // also important to check html error codes
         // 200 means no errors
-        console.log(obj)
         if (obj.cod === 200) {
           setLocation(obj.name)
           const url2 = new URL("https://api.openweathermap.org/data/2.5/onecall?");
@@ -47,7 +46,6 @@ function App() {
               return resp.json();
             })
             .then((obj2) => {
-              console.log(obj2);
               setWeather(obj2)
             })
         } else {
